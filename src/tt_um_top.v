@@ -25,7 +25,7 @@ module tt_um_top (
         .uart_tx_en(ena),
         .uart_txd(uio_out[1]),
         .uart_tx_busy(uio_out[2])
-    );
+    )
   
     // All output pins must be assigned. If not used, assign to 0.
     assign uio_out[7:3] = 5'b00000;
