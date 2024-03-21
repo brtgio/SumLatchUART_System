@@ -22,6 +22,7 @@ module tt_um_top (
         .save_a_n(uio_in[5]),
         .save_b_n(uio_in[6]),
         .data_input(uio_in[4:0]),
+        .uart_tx_en(ena),
         .uart_txd(uio_out[1]),
         .uart_tx_busy(uio_out[2])
     );
