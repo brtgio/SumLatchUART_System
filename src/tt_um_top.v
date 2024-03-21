@@ -16,7 +16,7 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    top top_inst (
+    top #(
         .clk(clk), 
         .reset_n(rst_n),
         .save_a_n(uio_in[5]),
