@@ -10,7 +10,7 @@ module tt_um_top (
 );
 
     top #(
-        .bits(5)
+        (.bits(5))
     top_inst (
         .clk(clk),
         .reset_n(rst_n),
