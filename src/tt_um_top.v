@@ -16,16 +16,7 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    top #(
-        .clk(clk), 
-        .reset_n(rst_n),
-        .save_a_n(uio_in[5]),
-        .save_b_n(uio_in[6]),
-        .data_input(uio_in[4:0]),
-        .uart_tx_en(ena),
-        .uart_txd(uio_out[1]),
-        .uart_tx_busy(uio_out[2])
-    );
+    top #(.bits[5] in (.save_a_n(ui_in[0]), .save_b_n(ui_in[1], .data_input(ui_in[4:2]))));
   
     
     assign uio_out[7:3] = 5'b00000;
