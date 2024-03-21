@@ -15,7 +15,7 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    top #(
+    toptop #(
         .bits(5)
     ) top_inst (
         .clk(clk),
