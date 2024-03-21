@@ -10,7 +10,7 @@ async def test_adder(dut):
   dut._log.info("Start")
   
   # Our example module doesn't use clock and reset, but we show how to use them here anyway.
-  clock = Clock(dut.clk, 10, units="us")
+  clock = Clock(dut.clk, 20, units="us")
   cocotb.start_soon(clock.start())
 
   # Reset
