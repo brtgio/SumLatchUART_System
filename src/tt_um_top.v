@@ -1,10 +1,3 @@
-/*
- * Copyright (c) 2024 Your Name
- * SPDX-License-Identifier: Apache-2.0
- */
-
-`define default_netname none
-
 module tt_um_top (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -16,12 +9,23 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    top #(.bits[5] in (.save_a_n(ui_in[0]), .save_b_n(ui_in[1], .data_input(ui_in[4:2]))));
-  
+    top #(
+        .bits(5)
+    top_inst (
+        .clk(clk),
+        .reset_n(rst_n),
+        .save_a_n(ui_in[0]),
+        .save_b_n(ui_in[1]),
+        .data_input(ui_in[4:2]),
+        .uart_tx_en(ena),
+        .uart_txd(uio_out[1]),
+        .uart_tx_busy(uio_out[2])
+    );
     
     assign uio_out[7:3] = 5'b00000;
     assign uo_out[7:0] = 8'b00000000;
     assign uio_oe[7:0] = 8'b00000000;
 
 endmodule
+
 
