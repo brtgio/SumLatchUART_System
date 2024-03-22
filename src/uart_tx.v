@@ -76,13 +76,16 @@ reg [3:0] bit_counter;
 reg [2:0] fsm_state;
 reg [2:0] n_fsm_state;
 
-    wire next_bit     = cycle_counter == CYCLES_PER_BIT;
+wire next_bit     = cycle_counter == CYCLES_PER_BIT;
 wire payload_done = bit_counter   == PAYLOAD_BITS  ;
 wire stop_done    = bit_counter   == STOP_BITS && fsm_state == FSM_STOP;
+    
 localparam FSM_IDLE = 0;
 localparam FSM_START= 1;
 localparam FSM_SEND = 2;
 localparam FSM_STOP = 3;
+    
+integer i = 0;
 
 
 // --------------------------------------------------------------------------- 
@@ -112,7 +115,7 @@ end
 
 //
 // Handle updates to the sent data register.
-integer i = 0;
+
 always @(posedge clk) begin : p_data_to_send
     if(!resetn) begin
         data_to_send <= {PAYLOAD_BITS{1'b0}};
