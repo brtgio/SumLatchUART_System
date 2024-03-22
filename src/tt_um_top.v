@@ -17,12 +17,11 @@ module tt_um_top (
 
     toptop #(
     ) top_inst (
-     .clk(clk),
-     .reset_n(ui_in[7]),
+     .clk(ui_in[7]),
+     .reset_n(ui_in[6]),
      .save_a_n(uio_in[5]),
      .save_b_n(uio_in[4]),
      .data_input(ui_in[3:0]),
-     .uart_tx_en(ui_in[6]),
      .uart_txd(uio_out[0]),
      .uart_tx_busy(uo_out[7])
     );
