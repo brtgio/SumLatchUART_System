@@ -16,7 +16,6 @@ module tt_um_top (
 );
 
     toptop #(
-     .bits(11)
     ) top_inst (
         .clk(clk),
         .reset_n(rst_n),
