@@ -1,7 +1,7 @@
 module fourbit_adder(
     input [3:0] a,
     input [3:0] b,
-    output reg[4:0] sum
+    output [4:0] sum
 );
 
 reg [4:0] sum_intermediate;
@@ -15,9 +15,7 @@ always @* begin
 end
 
 
-always @*begin
-	sum = sum_intermediate;
-end
+	assign sum = sum_intermediate;
 endmodule
 
 
