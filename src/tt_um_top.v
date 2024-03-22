@@ -17,19 +17,20 @@ module tt_um_top (
 
     toptop #(
     ) top_inst (
-        .clk(clk),
-        .reset_n(rst_n),
-        .save_a_n(ui_in[0]),
-        .save_b_n(ui_in[1]),
-        .data_input(ui_in[4:2]),
-        .uart_tx_en(ena),
-        .uart_txd(uio_out[1]),
-        .uart_tx_busy(uio_out[2])
+     .clk(clk),
+     .reset_n(ui_in[7]),
+     .save_a_n(uio_in[5]),
+     .save_b_n(uio_in[4]),
+     .data_input(ui_in[3:0]),
+     .uart_tx_en(ui_in[6]),
+     .uart_txd(uio_out[0]),
+     .uart_tx_busy(uo_out[7])
     );
     
-    assign uio_out[7:3] = 5'b00000;
-    assign uo_out[7:0] = 8'b00000000;
-    assign uio_oe[7:0] = 8'b00000000;
+    
+    assign uo_out [7:1] = 7'b0000000;
+    assign uio_out [7:1] = 7'b0000000;
+    assign uio_oe [7:0] = 8'b11111111;
 
 endmodule
 
