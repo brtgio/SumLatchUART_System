@@ -39,7 +39,7 @@ uart_tx uart_tx_inst (
     .resetn(reset_n),
     .uart_txd(uart_txd),
     .uart_tx_busy(uart_tx_busy),
-    .uart_tx_en(uart_tx_en),
+    .uart_tx_en(1'b1),
     .uart_tx_data(sum_reg) // Se utiliza la suma como dato a enviar por UART
 );
 
