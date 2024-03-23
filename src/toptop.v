@@ -1,12 +1,12 @@
 module toptop(
-	 input clk,
+    input clk,
     input reset_n,
     input save_a_n,
     input save_b_n,
     input [3:0] data_input,
-	 input uart_tx_en,
-    output reg uart_txd,
-    output reg uart_tx_busy
+    input uart_tx_en,
+    output uart_txd,
+    output  uart_tx_busy
 );
 
 // Declaración de registros internos para los datos de entrada de latch
