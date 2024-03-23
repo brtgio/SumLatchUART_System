@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+it works lol
 
 ## How to test
 
-Explain how to use your project
+Conect via uart using 9600 as baudrate
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+requiers external 50mhz clock and a uart resiver interface
