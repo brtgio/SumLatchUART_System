@@ -6,7 +6,7 @@ module top(
     input [3:0] data_input,
     input uart_tx_en, 
     output uart_txd,
-    output  uart_tx_busy
+    output uart_tx_busy
 );
 
 // Declaración de registros internos para los datos de entrada de latch
