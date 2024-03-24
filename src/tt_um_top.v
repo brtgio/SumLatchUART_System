@@ -21,7 +21,7 @@ module tt_um_top (
         .save_a_n(ui_in [1]),
         .save_b_n(ui_in [2]),
         .data_input(ui_in [6:3]),
-        .uart_txd(uio_out [0])
+        .uart_txd(uio_out [0]),
         .uart_tx_busy(uo_out [7])
     );
     // Assigning the non-used bits to 0
