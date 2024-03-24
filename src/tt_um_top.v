@@ -19,7 +19,7 @@ module tt_um_top (
      .clk(ui_in [0]),         
      .reset_n(ui_in [1]),      
      .save_a_n(ui_in [2]),
-     .save_a_n(ui_in [3]),
+     .save_b_n(ui_in [3]),
      .data_input(ui_in [7:4]),
      .q_a(uo_out [3:0]),
      .q_b(uo_out [7:4])
