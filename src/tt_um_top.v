@@ -15,7 +15,7 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    latch_2x8  top_inst (
+    latch  top_inst (
      .clk(ui_in [0]),         
      .reset_n(ui_in [1]),      
      .save_a_n(ui_in [2]),
