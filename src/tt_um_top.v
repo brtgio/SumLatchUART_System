@@ -27,9 +27,9 @@ module tt_um_top (
 
     // Assigning the non-used output bits to 0
     assign uo_out [7:2] = 6'b000000;
-    assign uio_out [7:0] = 8'b00000000;
+
     // Configuring uio_oe as output (assigning all bits to 1)
-    assign uio_oe[7:0] = 8'b11111111;
+    assign uio_oe[7:0] = 8'b00000000;
 
 endmodule
 
