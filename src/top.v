@@ -4,14 +4,13 @@ module top(
     input save_a_n,
     input save_b_n,
     input [3:0] data_input,
-     output uartbusy,
+    output uartbusy,
     input uart_tx_en, 
     output uart_txd
-   
 );
 
 // Declaración de registros internos para los datos de entrada de latch
-    wire [3:0] a, b; 
+wire [3:0] a, b; 
 
 // Declaración de registro interno para almacenar la suma
 wire [4:0] sum_reg; 
@@ -37,9 +36,9 @@ fourbit_adder sum_inst (
 // Instanciación del módulo uart_tx
 uart_tx uart_tx_inst (
     .clk(clk),
-    .resetn(reset_n),
+    .resetn(reset_n), // Se corrigió el nombre del puerto de entrada
     .uart_txd(uart_txd),
-    .uart_tx_busy(uartbusy),
+    .uart_tx_busy(uartbusy), // Se corrigió el nombre del puerto de salida
     .uart_tx_en(uart_tx_en),
     .uart_tx_data(sum_reg) // Se utiliza la suma como dato a enviar por UART
 );
