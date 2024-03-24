@@ -17,20 +17,20 @@ module tt_um_top (
 
   // Instantiation of the toptop module
     toptop toptop_inst (
-        .clk(ui_in[0]),
+        .clk(uio_in[0]),
         .reset_n(ui_in[1]),
-        .save_a_n(ui_in[2]),
-        .save_b_n(ui_in[3]),
+        .save_a_n(uio_in[1]),
+        .save_b_n(uio_in[2]),
         .data_input(ui_in[7:4]),
-        .uart_txd(uo_out[0]),
-        .uart_tx_busy(uo_out[1])
+        .uart_txd(uio_out[3]),
+        .uart_tx_busy(uio_out[4])
     );
 
     // Assigning the non-used output bits to 0
     assign uo_out [7:2] = 6'b000000;
     assign uio_out [7:0] = 8'b11111111;
     // Configuring uio_oe as output (assigning all bits to 1)
-    assign uio_oe[7:0] = 8'b11111111;
+    assign uio_oe[7:0] = 8'b11111000;
 
 endmodule
 
