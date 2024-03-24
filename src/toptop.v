@@ -4,7 +4,6 @@ module toptop(
     input save_a_n,
     input save_b_n,
     input [3:0] data_input,
-    input uart_tx_en,
     output uart_txd,
     output  uart_tx_busy
 );
