@@ -21,11 +21,11 @@ module tt_um_top (
      .save_a_n(ui_in [2]),
      .save_a_n(ui_in [3]),
      .data_input(ui_in [7:4]),
-     .q_a(uio_out [3:0]),
-     .q_b(uio_out [7:4])
+     .q_a(uo_out [3:0]),
+     .q_b(uo_out [7:4])
     );
     // Asignando los bits no usados a 0
- assign uo_out [7:0] =  8'b00000000;
+ assign uoi_out [7:0] =  8'b00000000;
     
     
     // Configurando uio_oe como salida (asignando todos los bits a 1)
