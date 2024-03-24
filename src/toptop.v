@@ -10,7 +10,7 @@ module toptop(
 );
 
 // Declaración de registros internos para los datos de entrada de latch
-reg [7:0] a, b; 
+    reg [3:0] a, b; 
 
 // Declaración de registro interno para almacenar la suma
 reg [4:0] sum_reg; 
