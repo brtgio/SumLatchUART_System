@@ -9,9 +9,9 @@
 
 module uart_tx(
 input  wire         clk         , // Top level system clock input.
-input  wire         resetn      , // Asynchronous active low reset.
+input  wire         reset_n      , // Asynchronous active low reset.
 output wire         uart_txd    , // UART transmit pin.
-output wire         uart_tx_busy, // Module busy sending previous item.
+output wire         uartbusy, // Module busy sending previous item.
 input  wire         uart_tx_en  , // Send the data on uart_tx_data
 input  wire [PAYLOAD_BITS-1:0]   uart_tx_data  // The data to be sent
 );
@@ -92,7 +92,7 @@ integer i = 0;
 // FSM next state selection.
 // 
 
-assign uart_tx_busy = fsm_state != FSM_IDLE;
+assign uartbusy = fsm_state != FSM_IDLE;
 assign uart_txd     = txd_reg;
 
 
@@ -117,7 +117,7 @@ end
 // Handle updates to the sent data register.
 
 always @(posedge clk) begin : p_data_to_send
-    if(!resetn) begin
+    if(!reset_n) begin
         data_to_send <= {PAYLOAD_BITS{1'b0}};
     end else if(fsm_state == FSM_IDLE && uart_tx_en) begin
         data_to_send <= uart_tx_data;
@@ -132,7 +132,7 @@ end
 //
 // Increments the bit counter each time a new bit frame is sent.
 always @(posedge clk) begin : p_bit_counter
-    if(!resetn) begin
+    if(!reset_n) begin
         bit_counter <= 4'b0;
     end else if(fsm_state != FSM_SEND && fsm_state != FSM_STOP) begin
         bit_counter <= {COUNT_REG_LEN{1'b0}};
@@ -149,7 +149,7 @@ end
 //
 // Increments the cycle counter when sending.
 always @(posedge clk) begin : p_cycle_counter
-    if(!resetn) begin
+    if(!reset_n) begin
         cycle_counter <= {COUNT_REG_LEN{1'b0}};
     end else if(next_bit) begin
         cycle_counter <= {COUNT_REG_LEN{1'b0}};
@@ -164,7 +164,7 @@ end
 //
 // Progresses the next FSM state.
 always @(posedge clk) begin : p_fsm_state
-    if(!resetn) begin
+    if(!reset_n) begin
         fsm_state <= FSM_IDLE;
     end else begin
         fsm_state <= n_fsm_state;
@@ -175,7 +175,7 @@ end
 //
 // Responsible for updating the internal value of the txd_reg.
 always @(posedge clk) begin : p_txd_reg
-    if(!resetn) begin
+    if(!reset_n) begin
         txd_reg <= 1'b1;
     end else if(fsm_state == FSM_IDLE) begin
         txd_reg <= 1'b1;
