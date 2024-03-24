@@ -34,9 +34,9 @@ fourbit_adder sum_inst (
 // Instanciación del módulo uart_tx
 uart_tx uart_tx_inst (
 .clk(clk),
-.resetn(reset_n), // Se corrigió el nombre del puerto de entrada
+.reset_n(reset_n), // Se corrigió el nombre del puerto de entrada
 .uart_txd(uart_txd),
-.uart_tx_busy(uartbusy), // Se corrigió el nombre del puerto de salida
+.uartbusy(uartbusy), // Se corrigió el nombre del puerto de salida
 .uart_tx_en(uart_tx_en),
 .uart_tx_data(sum_reg) // Se utiliza la suma como dato a enviar por UART
 );
