@@ -22,7 +22,7 @@ module tt_um_top (
         .save_a_n(uio_in[2]),
         .save_b_n(uio_in[3]),
         .data_input(ui_in[3:0]),
-        .uart_tx_en (uio_in[4])
+        .uart_tx_en (uio_in[4]),
         .uart_txd(uio_out[5]),
         .uart_tx_busy(uio_out[6])
     );
