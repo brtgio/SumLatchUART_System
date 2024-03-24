@@ -16,7 +16,7 @@ module toptop(
 wire [4:0] sum_reg; 
 
 // Instanciación del módulo eight_bit_latch
-latch latch_inst (
+latch_2x8 latch_inst (
     .clk(clk),
     .reset_n(reset_n),
     .save_a_n(save_a_n),
