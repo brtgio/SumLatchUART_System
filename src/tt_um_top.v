@@ -1,4 +1,4 @@
- /* Copyright (c) 2024 Your Name
+/* Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -24,13 +24,14 @@ module tt_um_top (
      .q_a(uo_out [3:0]),
      .q_b(uo_out [7:4])
     );
-    // Asignando los bits no usados a 0
- assign uoi_out [7:0] =  8'b00000000;
+    // Assigning the non-used bits to 0
+    assign uio_out [7:0] = 8'b00000000;
     
     
-    // Configurando uio_oe como salida (asignando todos los bits a 1)
- assign uio_oe [7:0] = 8'b11111111;
+    // Configuring uio_oe as output (assigning all bits to 1)
+    assign uio_oe [7:0] = 8'b11111111;
 endmodule
+
 
 
 
