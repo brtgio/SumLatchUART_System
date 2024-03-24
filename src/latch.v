@@ -1,4 +1,4 @@
-module latch_2x8(
+module latch(
     input clk,              // Reloj
     input reset_n,          // Pulsador de reset (activo en bajo)
     input save_a_n,         // Pulsador de save A (activo en bajo)
