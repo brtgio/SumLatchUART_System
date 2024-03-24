@@ -16,13 +16,13 @@ module tt_um_top (
 );
 
     latch_2x8  top_inst (
-     .clk(ui_in[0]),         
-     .reset_n(ui_in[1]),      
-     .save_a_n(ui_in[2]),
-     .save_a_n(ui_in[3]),
-     .data_input(ui_in[7:4]),
-     .q_a(uio_out[3:0]),
-     .q_b(uio_out[7:4])
+     .clk(ui_in [0]),         
+     .reset_n(ui_in [1]),      
+     .save_a_n(ui_in [2]),
+     .save_a_n(ui_in [3]),
+     .data_input(ui_in [7:4]),
+     .q_a(uio_out [3:0]),
+     .q_b(uio_out [7:4])
     );
     // Asignando los bits no usados a 0
  assign uo_out [7:0] =  8'b00000000;
