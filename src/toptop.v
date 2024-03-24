@@ -10,10 +10,10 @@ module toptop(
 );
 
 // Declaración de registros internos para los datos de entrada de latch
-    reg [3:0] a, b; 
+    wire [3:0] a, b; 
 
 // Declaración de registro interno para almacenar la suma
-reg [4:0] sum_reg; 
+wire [4:0] sum_reg; 
 
 // Instanciación del módulo eight_bit_latch
 latch_2x8 latch_inst (
