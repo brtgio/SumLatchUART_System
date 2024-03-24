@@ -22,9 +22,10 @@ module tt_um_top (
         .save_a_n(uio_in[2]),
         .save_b_n(uio_in[3]),
         .data_input(ui_in[3:0]),
+        .uartbusy(uio_out[6]),
         .uart_tx_en (uio_in[4]),
-        .uart_txd(uio_out[5]),
-        .uartbusy(uio_out[6])
+        .uart_txd(uio_out[5])
+        
     );
 
     // Assigning the non-used output bits to 0
