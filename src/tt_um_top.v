@@ -15,13 +15,14 @@ module tt_um_top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    toptop  top_inst (
-        .clk(ui_in[0]),                // Connect top-level clock signal
-        .reset_n(ui_in[1]),          // Connect top-level reset signal
+  // Instantiation of the toptop module
+    toptop toptop_inst (
+        .clk(ui_in[0]),
+        .reset_n(ui_in[1]),
         .save_a_n(ui_in[2]),
         .save_b_n(ui_in[3]),
         .data_input(ui_in[7:4]),
-        .uart_tx_busy(uo_out[0]), // UART transmit busy signal connected to the most significant bit of uio_out
+        .uart_txd(uo_out[0]),
         .uart_tx_busy(uo_out[1])
     );
 
