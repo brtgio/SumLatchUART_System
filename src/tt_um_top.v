@@ -30,7 +30,7 @@ module tt_um_top (
     
     
     // Configurando uio_oe como entrada (asignando todos los bits a 1)
- assign uio_oe [7:0] = 8'b00000000;
+ assign uio_oe [7:0] = 8'b11111111;
 endmodule
 
 
