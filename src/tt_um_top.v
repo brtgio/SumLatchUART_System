@@ -26,7 +26,7 @@ module tt_um_top (
      .q_b(uio_out[7:4])
     );
     // Asignando los bits no usados a 0
- assign uo_out [7:0] =  8'b11111111;
+ assign uo_out [7:0] =  8'b00000000;
     
     
     // Configurando uio_oe como entrada (asignando todos los bits a 1)
