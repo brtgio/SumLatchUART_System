@@ -16,7 +16,7 @@ module tt_um_top (
 );
 
   // Instantiation of the toptop module
-    top top_instance(
+    top_final top_finalins(
         .clk(uio_in[0]),
         .reset_n(uio_in[1]),
         .save_a_n(uio_in[2]),
