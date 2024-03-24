@@ -1,4 +1,4 @@
-module pikachu(
+module top(
     input clk,
     input reset_n,
     input save_a_n,
@@ -35,7 +35,7 @@ fourbit_adder sum_inst (
 // Instanciación del módulo uart_tx
 uart_tx uart_tx_inst (
     .clk(clk),
-    .resetn(reset_n),
+    .reset_n(reset_n),
     .uart_txd(uart_txd),
     .uart_tx_busy(uart_tx_busy),
     .uart_tx_en(1'b1),
