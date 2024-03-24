@@ -6,7 +6,7 @@ module top(
     input [3:0] data_input,
     input uart_tx_en, 
     output uart_txd,
-    output uart_tx_busy
+    output uartbusy
 );
 
 // Declaración de registros internos para los datos de entrada de latch
@@ -38,7 +38,7 @@ uart_tx uart_tx_inst (
     .clk(clk),
     .resetn(reset_n),
     .uart_txd(uart_txd),
-    .uart_tx_busy(uart_tx_busy),
+    .uart_tx_busy(uartbusy),
     .uart_tx_en(uart_tx_en),
     .uart_tx_data(sum_reg) // Se utiliza la suma como dato a enviar por UART
 );
