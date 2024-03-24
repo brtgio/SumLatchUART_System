@@ -1,4 +1,4 @@
-module toptop(
+module top(
     input clk,
     input reset_n,
     input save_a_n,
