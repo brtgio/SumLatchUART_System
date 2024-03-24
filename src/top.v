@@ -1,4 +1,4 @@
-module top(
+module pikachu(
     input clk,
     input reset_n,
     input save_a_n,
