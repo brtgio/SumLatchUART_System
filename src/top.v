@@ -5,6 +5,7 @@ module top(
     input save_b_n,
     input [3:0] data_input,
     input uart_tx_en, 
+    input uart_tx_en, 
     output uart_txd,
     output  uart_tx_busy
 );
