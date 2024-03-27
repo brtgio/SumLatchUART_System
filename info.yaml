@@ -14,12 +14,13 @@ project:
   top_module:  "tt_um_top"
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
-  source_files:        
+  source_files: 
+    - "top.v"
     - "tt_um_top.v"
     - "alu.v"
     - "latch_2x8.v"
     - "uart_tx.v"
-    - "top.v"
+   
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
