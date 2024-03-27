@@ -23,7 +23,7 @@ module tb ();
   wire [7:0] uio_oe;
 
   // Replace tt_um_example with your module name:
-  tt_um_top top_tb (
+  top top_tb (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
