@@ -16,7 +16,7 @@ With these components, the system is capable of receiving data using 4 bits for 
 
 ## Block diagram
 <p align="center">
-  <img src="4-BIT%20UART%20ALU.svg" alt="4-BIT UART ALU" width="400" height="400">
+  <img src="4-BIT%20UART%20ALU.svg" alt="4-BIT UART ALU" width="600">
 </p>
 
 
