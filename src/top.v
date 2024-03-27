@@ -21,8 +21,8 @@ latch_2x8 latch_inst (
     .save_a_n(save_a_n),
     .save_b_n(save_b_n),
     .data_input(data_input),
-    .a(a), // Salida del latch para el primer operando
-    .b(b)  // Salida del latch para el segundo operando
+    .q_a(a), // Salida del latch para el primer operando
+    .q_b(b)  // Salida del latch para el segundo operando
 );
 
 // Instancia de la ALU
