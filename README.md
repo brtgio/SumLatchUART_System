@@ -18,6 +18,7 @@ With these components, the system is capable of receiving data using 4 bits for 
 <p align="center">
   <img src="4-BIT%20UART%20ALU.svg" alt="4-BIT UART ALU" width="1000">
 </p>
+
 ## Input and Output Description
 
 | Pin Name   | Direction | Bit Number | Description               |
