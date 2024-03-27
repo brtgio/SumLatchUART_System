@@ -29,11 +29,11 @@ latch_2x8 latch_inst (
 // Instancia de la ALU
 alu alu_inst (
     .clk(clk),
-	 .reset_n(!reset_n),
+    .reset_n(!reset_n),
     .ena(ena),
     .a(a),
     .b(b),
-    .result(data_send),
+    .result(data_send)
 );
 
 // Instancia de UART
