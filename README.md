@@ -1,20 +1,20 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
-
 # UART 4 BIT LATCH ALU
+
+- ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
 - [Read the documentation for project](docs/info.md)
 
 ## Project Description
 
-The UART 4-BIT LATCH ALU is a digital system designed to reduce the number of inputs required for input data and minimize the number of outputs needed to obtain the output data.
-It composes of:
-1. Dual 4-Bit lach.
-2. 4 BIT ALU.
-3. UART Transmiter
-   
+The UART 4-BIT LATCH ALU is a digital system designed to reduce the number of inputs required for input data and minimize the number of outputs needed to obtain the output data. It comprises:
+
+1. Dual 4-Bit Latch.
+2. 4-Bit ALU.
+3. UART Transmitter.
+
 With these components, the system is capable of receiving data using 4 bits for two operands, which leaves room for using 4 bits to select which operation it's going to perform by the ALU. The output is driven by an 8-bit UART transmitter, which reduces the number of output bits needed to obtain the operation result. The data can be read using any UART interface, which is common among microcontrollers or other standalone UART interfaces.
 
-To learn more and get started with this project, visit [UART 4 BIT LATCH ALU](https://tinytapeout.com).
+
 
 ## Design Components
 
