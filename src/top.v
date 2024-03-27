@@ -1,13 +1,13 @@
 module top (
-    input clk,
-    input reset_n,
-    input save_a_n,
-    input save_b_n,
-    input [3:0] ena,
-    input [3:0] data_input,
-	 input uart_tx_en,
-	 output  uartbusy,
-	 output uart_txd
+input clk,
+input reset_n,
+input save_a_n,
+input save_b_n,
+input [3:0] ena,
+input [3:0] data_input,
+input uart_tx_en,
+output  uartbusy,
+output uart_txd
 
 );
 
