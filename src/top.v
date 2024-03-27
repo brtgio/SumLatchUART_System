@@ -8,7 +8,6 @@ input [3:0] data_input,
 input uart_tx_en,
 output  uartbusy,
 output uart_txd
-
 );
 
 // Declaración de registros internos para los datos de entrada de latch
