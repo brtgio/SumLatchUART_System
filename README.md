@@ -14,6 +14,8 @@ The UART 4-BIT LATCH ALU is a digital system designed to reduce the number of in
 
 With these components, the system is capable of receiving data using 4 bits for two operands, which leaves room for using 4 bits to select which operation it's going to perform by the ALU. The output is driven by an 8-bit UART transmitter, which reduces the number of output bits needed to obtain the operation result. The data can be read using any UART interface, which is common among microcontrollers or other standalone UART interfaces.
 
+##Block diagram
+![screenshot](4-BIT UART ALU.svg)
 
 
 ## Design Components
