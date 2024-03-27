@@ -4,8 +4,8 @@ module latch_2x8(
     input save_a_n,         // Pulsador de save A (activo en bajo)
     input save_b_n,         // Pulsador de save B (activo en bajo)
     input [3:0] data_input, // Entrada de 4 bits para controlar el latch
-    output [3:0] a,   // Salida del latch A de 4 bits
-    output  [3:0] b    // Salida del latch B de 4 bits
+    output [3:0] q_a,   // Salida del latch A de 4 bits
+    output  [3:0] q_b    // Salida del latch B de 4 bits
 );
 
 reg [3:0] latch_a; // Latch del grupo A de 4 bits
