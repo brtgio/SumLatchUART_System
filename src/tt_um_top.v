@@ -16,26 +16,23 @@ module tt_um_top (
 );
 
   // Instantiation of the toptop module
-    top top_finalins(
-        .clk(uio_in[0]),
-        .reset_n(uio_in[1]),
-        .save_a_n(uio_in[2]),
-        .save_b_n(uio_in[3]),
-        .data_input(ui_in[3:0]),
-        .ena(ui_in[7:4]),
-        .uartbusy(uio_out[6]),
-        .uart_tx_en (uio_in[4]),
-        .uart_txd(uio_out[5])
-        
+ top top_finalins(
+.clk(uio_in[0]),
+.reset_n(uio_in[1]),
+.save_a_n(uio_in[2]),
+.save_b_n(uio_in[3]),
+.data_input(ui_in[3:0]),
+.ena(ui_in[7:4]),
+.uartbusy(uio_out[6]),
+.uart_tx_en (uio_in[4]),
+ .uart_txd(uio_out[5])       
     );
-
     // Assigning the non-used output bits to 0
     assign uo_out [7:0] = 8'b00000000;
     assign uio_out [4:0] = 5'b00000;
     assign uio_out [7] = 1'b0;
     // Configuring uio_oe as output (assigning all bits to 1)
     assign uio_oe[7:0] = 8'b11100000;
-
 endmodule
 
 
