@@ -33,8 +33,7 @@ alu alu_inst (
     .ena(ena),
     .a(a),
     .b(b),
-    .result(data_send)
-);
+    .result(data_send));
 
 // Instancia de UART
 uart_tx uart_inst (
