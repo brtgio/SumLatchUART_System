@@ -22,9 +22,10 @@ With these components, the system is capable of receiving data using 4 bits for 
 
 | Pin Name   | Direction | Bit Number | Description               |
 |------------|-----------|------------|---------------------------|
-| CLK        | Input     |            | Clock signal input        |
-| RESET      | Input     |            | Reset signal input        |
-| DATA_IN    | Input     | [3:0]      | Input data to the ALU     |
+| clk        | Input     |            | Clock signal input        |
+| reset_n    | Input     |            | Reset signal input        |
+| data_in    | Input     | [3:0]      | Input data to the ALU     |
+| save_a_n   | Input     |            | Save to latch A           |
 | OP_SELECT  | Input     | [3:0]      | Operation select input    |
 | RESULT_OUT | Output    | [7:0]      | Result data output        |
 | UART_TX    | Output    |            | UART transmitter output   |
