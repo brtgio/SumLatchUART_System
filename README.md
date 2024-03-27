@@ -18,6 +18,16 @@ With these components, the system is capable of receiving data using 4 bits for 
 <p align="center">
   <img src="4-BIT%20UART%20ALU.svg" alt="4-BIT UART ALU" width="1000">
 </p>
+## Input and output description
+| Pin Name   | Direction | Bit Number | Description               |
+|------------|-----------|------------|---------------------------|
+| CLK        | Input     |            | Clock signal input        |
+| RESET      | Input     |            | Reset signal input        |
+| DATA_IN    | Input     | [3:0]      | Input data to the ALU     |
+| OP_SELECT  | Input     | [3:0]      | Operation select input    |
+| RESULT_OUT | Output    | [7:0]      | Result data output        |
+| UART_TX    | Output    |            | UART transmitter output   |
+| UART_RX    | Input     |            | UART receiver input       |
 
 
 
