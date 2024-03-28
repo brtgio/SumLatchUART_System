@@ -68,7 +68,7 @@ In this project, a UART is only used to transmit the ALU operation result to a c
 <p align="center">
   <img src="alu.svg" alt="ALU" width="1000">
 </p>
-The ALU performs arithmetic and logical operations on 4-bit data. Its based on regular verilog suported operators, we use 
+The ALU performs arithmetic and logical operations on 4-bit data. Its based on regular verilog suported operators, we use OP_select to select the operation to be perforn, from the dual 4-bit latch we use its outputs q_a and q_b as ALU operands
 
 ## Possible Arithmetic Operations
 
