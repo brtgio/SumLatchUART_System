@@ -53,6 +53,7 @@ Simulation was conducted using Quartus Prime Lite software, employing a 50 MHz c
 As observed in the simulation, when the reset_n signal is high, the output q_a and q_b transition to zero, indicating that the registers have been cleared. Additionally, we can observe how values change in memory when save_a_n or save_b_n are triggered.
 
 </center>
+
 ### UART (Universal Asynchronous Receiver/Transmitter)
 
 The UART module facilitates asynchronous serial communication between the system and other devices. It handles the transmission and reception of data in a serial format.
