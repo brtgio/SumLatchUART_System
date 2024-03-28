@@ -65,7 +65,9 @@ UART is a communication protocol that operates asynchronously, eliminating the n
 In this project, a UART is only used to transmit the ALU operation result to a compatible UART device. This allows us to maintain the output with the least amount of pins, due to the constraints of the TinyTapeout template. This UART transmitter replaces two 7-segment displays, which would require 14 pins to be driven. With this transmitter, we reduce it to two signals: one to indicate if the UART is sending data, and one for the Tx signal. Our UART transmiter operates at a 9600 baudrate wich is a really coman badrate amoung UART capable devices. This UART implementation is based on ben-marshall uart project.
 
 ### Arithmetic Logic Unit (ALU)
-
+<p align="center">
+  <img src="alu.svg" alt="ALU" width="1000">
+</p>
 The ALU performs arithmetic and logical operations on 4-bit data. Its based on regular verilog suported operators, we use 
 
 ## Possible Arithmetic Operations
