@@ -56,7 +56,7 @@ As observed in the simulation, when the reset_n signal is high, the output q_a a
 
 ### UART (Universal Asynchronous Receiver/Transmitter)
 <p align="center">
-  <img src="uart.svg" alt="uart" width="1700">
+  <img src="uart.svg" alt="uart" width="3000">
 </p>
 UART is a communication protocol that operates asynchronously, eliminating the need for both devices to share a common clock signal. Instead, it relies on individual clocks on each device to synchronize data transmission. This simplicity allows UART to require only two cables: one for transmitting data (Tx) and another for receiving data. However, for successful communication, both devices must operate at the same baud rate, ensuring that data is transmitted and received at the correct speed.
 
