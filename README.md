@@ -38,7 +38,7 @@ With these components, the system is capable of receiving data using 4 bits for 
 
 ### Dual 4-Bit Latch
 <p align="center">
-  <img src="dual%20four%20bit%20latch.svg" alt="Dual Four Bit Latch" width="700">
+  <img src="dual%20four%20bit%20latch.svg" alt="Dual Four Bit Latch" width="900">
 </p>
 
 This module serves as a 4-bit dual latch system, designed to capture and retain input data on the rising edge of the clock signal (clk). Upon activation of the save_a_n signal, data is stored in latch A, providing a mechanism for temporary data storage. Similarly, when the save_b_n signal is triggered, the module saves data in latch B, facilitating independent data storage in two separate registers.
