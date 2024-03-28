@@ -16,7 +16,7 @@ project:
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files: 
     - "four_bit_alu.v"
-    - "tt_um_top.v"
+    - "tt_um_alu.v"
     - "alu.v"
     - "latch_2x8.v"
     - "uart_tx.v"
