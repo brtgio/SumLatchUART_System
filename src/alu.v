@@ -1,7 +1,7 @@
 module alu (
     input clk,            // Señal de reloj
     input reset_n,        // Señal de reset
-    input [3:0] ena,      // Señal de selección de operación
+    input [3:0] OP_select,      // Señal de selección de operación
     input [3:0] a,        // Primer operando (4 bits)
     input [3:0] b,        // Segundo operando (4 bits)
     output [7:0] result   // Resultado de la operación (8 bits)
@@ -17,7 +17,7 @@ always @(posedge clk or posedge reset_n) begin
         internal_result <= 8'b0;
     end else begin
         // Selección de la operación basada en la señal de selección
-        case (ena)
+        case (OP_select)
             4'b0001: internal_result <= {4'b0000, a} + {4'b0000, b}; // Suma
             4'b0010: internal_result <= {4'b0000, a} - {4'b0000, b}; // Resta
             4'b0011: internal_result <= {4'b0000, a} & {4'b0000, b}; // AND
