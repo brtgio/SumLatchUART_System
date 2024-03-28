@@ -5,7 +5,7 @@ input clk,
 input reset_n,
 input save_a_n,
 input save_b_n,
-input [3:0] ena,
+input [3:0] OP_select,
 input [3:0] data_input,
 input uart_tx_en,
 output  uartbusy,
@@ -31,7 +31,7 @@ latch_2x8 latch_inst (
 alu alu_inst (
     .clk(clk),
     .reset_n(!reset_n),
-    .ena(ena),
+    .OP_select(OP_select),
     .a(a),
     .b(b),
     .result(data_send));
