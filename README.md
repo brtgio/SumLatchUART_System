@@ -41,7 +41,7 @@ With these components, the system is capable of receiving data using 4 bits for 
   <img src="dual%20four%20bit%20latch.svg" alt="Dual Four Bit Latch" width="900">
 </p>
 
-This module serves as a 4-bit dual latch system, designed to capture and retain input data on the rising edge of the clock signal (clk). Upon activation of the save_a_n signal, data is stored in latch A, providing a mechanism for temporary data storage. Similarly, when the save_b_n signal is triggered, the module saves data in latch B, facilitating independent data storage in two separate registers.
+This module serves as a 4-bit dual latch system, designed to capture and retain input data on the rising edge of the clock signal (clk). Upon activation of the save_a_n signal, data is stored in latch A, providing a mechanism for temporary data storage. Similarly, when the save_b_n signal is triggered, the module saves data in latch B, facilitating independent data storage in two separate registers. If both save signals are activated simultaneously, no data will be saved due to the NAND design which triggers the multiplexers.
 
 In the event of a reset condition, indicated by the reset_n signal, both latches are cleared, causing the stored data to be reset to zero. It's essential to note that the use of D-type flip-flops for data storage ensures data integrity during normal operation. However, as with most volatile memory elements, data stored in the latches is lost upon power-off, as the memory contents are not persistent.
 #### Simulation
