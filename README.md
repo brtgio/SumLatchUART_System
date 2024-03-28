@@ -66,19 +66,7 @@ In this project, a UART is only used to transmit the ALU operation result to a c
 
 ### Arithmetic Logic Unit (ALU)
 
-The ALU performs arithmetic and logical operations on 4-bit data. It supports operations such as AND, OR, addition, and subtraction, providing essential computational capabilities for the design.
-
-#### Simulation
-
-Utilize Verilog simulation to test the ALU's functionality, ensuring correct operation for all supported arithmetic and logical operations.
-
-### Top Module
-
-The top module integrates the 4-bit latch, UART, and ALU to create the complete design. It orchestrates the interaction between these components to achieve the desired functionality.
-
-#### Simulation
-
-Simulate the top module to verify the overall behavior of the design. Test various input scenarios to ensure proper data processing and communication.
+The ALU performs arithmetic and logical operations on 4-bit data. Its based on regular verilog suported operators, we use 
 
 ## Possible Arithmetic Operations
 
@@ -92,6 +80,16 @@ The ALU can perform the following arithmetic and logical operations on input dat
 ## Simulation
 
 You can simulate the design using a Verilog-compatible simulation environment. Make sure to create a comprehensive testbench to verify the correct operation of the design under different scenarios.
+
+### Top Module
+
+The top module integrates the 4-bit latch, UART, and ALU to create the complete design. It orchestrates the interaction between these components to achieve the desired functionality.
+
+#### Simulation
+
+Simulate the top module to verify the overall behavior of the design. Test various input scenarios to ensure proper data processing and communication.
+
+
 
 ## Resources Employed
 
