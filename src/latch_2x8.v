@@ -1,3 +1,5 @@
+`define default_netname none
+
 module latch_2x8(
     input clk,              // Reloj
     input reset_n,          // Pulsador de reset (activo en bajo)
