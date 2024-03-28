@@ -58,7 +58,9 @@ As observed in the simulation, when the reset_n signal is high, the output q_a a
 <p align="center">
   <img src="uart.svg" alt="uart" width="3000">
 </p>
+
 UART is a communication protocol that operates asynchronously, eliminating the need for both devices to share a common clock signal. Instead, it relies on individual clocks on each device to synchronize data transmission. This simplicity allows UART to require only two cables: one for transmitting data (Tx) and another for receiving data. However, for successful communication, both devices must operate at the same baud rate, ensuring that data is transmitted and received at the correct speed.
+
 
 In this project, a UART is only used to transmit the ALU operation result to a compatible UART device. This allows us to maintain the output with the least amount of pins, due to the constraints of the TinyTapeout template. This UART transmitter replaces two 7-segment displays, which would require 14 pins to be driven. With this transmitter, we reduce it to two signals: one to indicate if the UART is sending data, and one for the Tx signal. Our UART transmiter operates at a 9600 baudrate wich is a really coman badrate amoung UART capable devices. This UART implementation is based on ben-marshall uart project.
 
