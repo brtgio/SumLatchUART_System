@@ -1,6 +1,6 @@
 `define default_netname none
 
-module top (
+module four_bit_alu (
 input clk,
 input reset_n,
 input save_a_n,
