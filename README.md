@@ -47,7 +47,11 @@ In the event of a reset condition, indicated by the reset_n signal, both latches
 #### Simulation
 
 Simulation was conducted using Quartus Prime Lite software, employing a 50 MHz clock with a 20 ns period for the clk signal. The remaining signals were simulated with random values.
+<center>
 
+<img src="dual_four_bit_latch_sim.JPG" alt="Dual Four Bit Latch Simulation" width="400" />
+
+</center>
 ### UART (Universal Asynchronous Receiver/Transmitter)
 
 The UART module facilitates asynchronous serial communication between the system and other devices. It handles the transmission and reception of data in a serial format.
