@@ -1,43 +1,45 @@
 module alu (
-    input clk,            // Señal de reloj
-    input reset_n,        // Señal de reset
-    input [3:0] OP_select,      // Señal de selección de operación
-    input [3:0] a,        // Primer operando (4 bits)
-    input [3:0] b,        // Segundo operando (4 bits)
-    output [7:0] result   // Resultado de la operación (8 bits)
+    input clk,            // Clock signal
+    input reset_n,        // Reset signal
+    input [3:0] OP_select,      // Operation selection signal
+    input signed [3:0] a,        // First operand (4 bits), signed
+    input signed [3:0] b,        // Second operand (4 bits), signed
+    output [7:0] result   // Operation result (8 bits)
 );
 
-// Registros para mantener el estado interno
+// Registers to maintain internal state
 reg [7:0] internal_result;
 
-// Proceso secuencial para realizar las operaciones en cada flanco de subida del reloj
+// Sequential process to perform operations on each rising edge of the clock
 always @(posedge clk or posedge reset_n) begin
     if (reset_n) begin
-        // En caso de reset, se limpia el registro del resultado
+        // Reset: clear the result register
         internal_result <= 8'b0;
     end else begin
-        // Selección de la operación basada en la señal de selección
+        // Operation selection based on the selection signal
         case (OP_select)
-            4'b0001: internal_result <= {4'b0000, a} + {4'b0000, b}; // Suma
-            4'b0010: internal_result <= {4'b0000, a} - {4'b0000, b}; // Resta
+            4'b0001: internal_result <= {4'b0000, a} + {4'b0000, b}; // Addition
+            4'b0010: internal_result <= $signed({4'b0000, a}) - $signed({4'b0000, b}); // Signed Subtraction
+            4'b1110: internal_result <= $signed({4'b0000, a}) / $signed({4'b0000, b}); // Signed Division
             4'b0011: internal_result <= {4'b0000, a} & {4'b0000, b}; // AND
             4'b0100: internal_result <= {4'b0000, a} | {4'b0000, b}; // OR
             4'b0101: internal_result <= {4'b0000, a} ^ {4'b0000, b}; // XOR
-            4'b0110: internal_result <= {4'b0000, a} * {4'b0000, b}; // Multiplicación
-            4'b0111: internal_result <= {4'b0000, a} << 1; // Desplazamiento a la izquierda (shift left)
-            4'b1000: internal_result <= {4'b0000, a} >> 1; // Desplazamiento a la derecha (shift right)
-            4'b1001: internal_result <= ~{4'b0000, a}; // Negación de bits (complemento a uno)
-            4'b1010: internal_result <= (a == b) ? 8'b00000001 : 8'b00000000; // Igualdad
-            4'b1011: internal_result <= (a != b) ? 8'b00000001 : 8'b00000000; // Desigualdad
-            4'b1100: internal_result <= (a > b) ? 8'b00000001 : 8'b00000000; // Mayor que
-            4'b1101: internal_result <= (a < b) ? 8'b00000001 : 8'b00000000; // Menor que
-            default: internal_result <= 8'b0; // Si no coincide con ninguna operación, el resultado es 0
+            4'b0110: internal_result <= {4'b0000, a} * {4'b0000, b}; // Multiplication
+            4'b0111: internal_result <= {4'b0000, a} << 1; // Left shift
+            4'b1000: internal_result <= {4'b0000, a} >> 1; // Right shift
+            4'b1001: internal_result <= ~{4'b0000, a}; // Ones' complement
+            4'b1010: internal_result <= (a == b) ? 8'b00000001 : 8'b00000000; // Equality
+            4'b1011: internal_result <= (a != b) ? 8'b00000001 : 8'b00000000; // Inequality
+            4'b1100: internal_result <= (a > b) ? 8'b00000001 : 8'b00000000; // Greater than
+            4'b1101: internal_result <= (a < b) ? 8'b00000001 : 8'b00000000; // Less than
+            default: internal_result <= 8'b0; // If no operation matches, result is 0
         endcase
     end
 end
 
-// Asignación del resultado a la salida
+// Assign the result to the output
 assign result = internal_result;
 
 endmodule
+
 
