@@ -37,7 +37,9 @@ With these components, the system is capable of receiving data using 4 bits for 
 ## Design Components
 
 ### Dual 4-Bit Latch
-![Dual Four Bit Latch](dual%20four%20bit%20latch.svg)
+<p align="center">
+  <img src="dual%20four%20bit%20latch.svg" alt="Dual Four Bit Latch" width="400">
+</p>
 
 The 4-bit latch temporarily stores input data for processing before it is passed to the ALU. It ensures that the data remains stable during computation.
 
