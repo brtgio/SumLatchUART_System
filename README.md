@@ -74,10 +74,24 @@ The ALU performs arithmetic and logical operations on 4-bit data. Its based on r
 
 The ALU can perform the following arithmetic and logical operations on input data:
 
-1. **AND:** Performs a bitwise AND operation between the input data.
-2. **OR:** Performs a bitwise OR operation between the input data.
-3. **Addition:** Computes the sum of the input data.
-4. **Subtraction:** Computes the difference between the input data.
+| OP_select | Operation        |
+|-----------|------------------|
+| 4'b0001   | Addition         |
+| 4'b0010   | Signed Subtraction |
+| 4'b1110   | Signed Division  |
+| 4'b0011   | AND              |
+| 4'b0100   | OR               |
+| 4'b0101   | XOR              |
+| 4'b0110   | Multiplication   |
+| 4'b0111   | Left Shift       |
+| 4'b1000   | Right Shift      |
+| 4'b1001   | Ones' Complement |
+| 4'b1010   | Equality         |
+| 4'b1011   | Inequality       |
+| 4'b1100   | Greater than     |
+| 4'b1101   | Less than        |
+| default   | Result is 0      |
+
 
 ## Simulation
 
