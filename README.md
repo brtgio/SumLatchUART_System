@@ -56,7 +56,9 @@ As observed in the simulation, when the reset_n signal is high, the output q_a a
 
 ### UART (Universal Asynchronous Receiver/Transmitter)
 
-The UART module facilitates asynchronous serial communication between the system and other devices. It handles the transmission and reception of data in a serial format.
+UART is a communication protocol that operates asynchronously, eliminating the need for both devices to share a common clock signal. Instead, it relies on individual clocks on each device to synchronize data transmission. This simplicity allows UART to require only two cables: one for transmitting data (Tx) and another for receiving data. However, for successful communication, both devices must operate at the same baud rate, ensuring that data is transmitted and received at the correct speed.
+
+In this project a UART its only used to transmit ALU operation result to a capable UART device this is so we can keep the output with the lest amount of pins, dude to the constrains of tiny 
 
 #### Simulation
 
