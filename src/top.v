@@ -1,3 +1,5 @@
+`define default_netname none
+
 module top (
 input clk,
 input reset_n,
