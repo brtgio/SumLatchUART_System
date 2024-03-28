@@ -49,7 +49,7 @@ In the event of a reset condition, indicated by the reset_n signal, both latches
 Simulation was conducted using Quartus Prime Lite software, employing a 50 MHz clock with a 20 ns period for the clk signal. The remaining signals were simulated with random values.
 <center>
 
-<img src="dual_four_bit_latch_sim.JPG" alt="Dual Four Bit Latch Simulation" width="400" />
+<img src="dual_four_bit_latch_sim.JPG" alt="Dual Four Bit Latch Simulation" width="1000" />
 
 </center>
 ### UART (Universal Asynchronous Receiver/Transmitter)
