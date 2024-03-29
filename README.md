@@ -96,7 +96,10 @@ The ALU can perform the following arithmetic and logical operations on input dat
 
 ## Simulation
 
-Simulation is done in the same way we did the latch simulation, but this time 
+Simulation is conducted similarly to how we performed the latch simulation. However, this time, we leave reset_n inactive, as triggering it would set the output to zero. For the remainder, we utilize random values to validate various inputs and operations. During simulation, we observe that operations are triggered as intended when the clk signal transitions on its rising edge.
+<p align="center">
+  <img src="alu_sim.svg" alt="ALU Simulation" width="1700">
+</p>
 
 ### Top Module
 
