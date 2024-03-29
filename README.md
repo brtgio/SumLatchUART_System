@@ -116,6 +116,25 @@ Testing was conducted using the Terasic DE10-Lite development board with the fol
 | UART Tx Signal            | 1 I/O pin for Tx signal                                   |
 | Additional Components     | Arduino Uno as UART receiver                              |
 
+In order to load the core to the MAX 10 FPGA we use USB-BLASTER in JTAG mode, the pin assigment is the next one:
+| Node Name    | Direction | Location | I/O Bank | VREF Group | Filter Location | I/O Standard |
+|--------------|-----------|----------|----------|------------|-----------------|--------------|
+| clk          | Input     | PIN_P11  | 3        | B3_N0      | PIN_P11         | 2.5 V        |
+| reset_n      | Input     | PIN_F15  | 7        | B7_N0      | PIN_F15         | 2.5 V        |
+| save_a_n     | Input     | PIN_B8   | 7        | B7_N0      | PIN_B8          | 2.5 V        |
+| save_b_n     | Input     | PIN_A7   | 7        | B7_N0      | PIN_A7          | 2.5 V        |
+| OP_select[3] | Input     | PIN_A14  | 7        | B7_N0      | PIN_A14         | 2.5 V        |
+| OP_select[2] | Input     | PIN_A13  | 7        | B7_N0      | PIN_A13         | 2.5 V        |
+| OP_select[1] | Input     | PIN_B12  | 7        | B7_N0      | PIN_B12         | 2.5 V        |
+| OP_select[0] | Input     | PIN_A12  | 7        | B7_N0      | PIN_A12         | 2.5 V        |
+| data_input[3]| Input     | PIN_C12  | 7        | B7_N0      | PIN_C12         | 2.5 V        |
+| data_input[2]| Input     | PIN_D12  | 7        | B7_N0      | PIN_D12         | 2.5 V        |
+| data_input[1]| Input     | PIN_C11  | 7        | B7_N0      | PIN_C11         | 2.5 V        |
+| data_input[0]| Input     | PIN_C10  | 7        | B7_N0      | PIN_C10         | 2.5 V        |
+| uart_tx_en   | Input     | PIN_B14  | 7        | B7_N0      | PIN_B14         | 2.5 V        |
+| uart_txd     | Output    | PIN_AB6  | 3        | B3_N0      | PIN_AB6         | 2.5 V        |
+| uartbusy     | Output    | PIN_B11  | 7        | B7_N0      | PIN_B11         | 2.5 V        |
+
 
 
 
