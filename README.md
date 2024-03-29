@@ -96,7 +96,7 @@ The ALU can perform the following arithmetic and logical operations on input dat
 
 ## Simulation
 
-You can simulate the design using a Verilog-compatible simulation environment. Make sure to create a comprehensive testbench to verify the correct operation of the design under different scenarios.
+Simulation is done in the same way we did the latch simulation, but this time 
 
 ### Top Module
 
