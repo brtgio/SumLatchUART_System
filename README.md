@@ -106,6 +106,19 @@ Simulation is conducted similarly to how we performed the latch simulation. Howe
 The top module its designe to instance evry module so each module serves as stage on the way to transmiting the information.
 
 ## Testing
+Testing was conducted using the Terasic DE10-Lite development board with the following hardware configuration:
+| Hardware Component       | Description                                               |
+|---------------------------|------------------------------------------------------------|
+| FPGA                      | MAX 10 10M50DAF484C7G FPGA                                |
+| Input Switches            | 10 input switches                                         |
+| LED Indicator             | 1 LED for UART busy indicator                             |
+| Push Buttons              | 2 push buttons with debouncing using Schmitt Trigger circuit |
+| UART Tx Signal            | 1 I/O pin for Tx signal                                   |
+| Additional Components     | Arduino Uno as UART receiver                              |
+
+
+
+
 
 
 ## Resources Employed
