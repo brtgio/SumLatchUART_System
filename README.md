@@ -135,7 +135,7 @@ In order to load the core to the MAX 10 FPGA we use USB-BLASTER in JTAG mode, th
 | uart_txd     | Output    | PIN_AB6  | 3        | B3_N0      | PIN_AB6         | 2.5 V        |
 | uartbusy     | Output    | PIN_B11  | 7        | B7_N0      | PIN_B11         | 2.5 V        |
 
-
+The testing was done reading the transmitter value with an arduino ide,
 
 
 
@@ -145,12 +145,7 @@ In order to load the core to the MAX 10 FPGA we use USB-BLASTER in JTAG mode, th
 - **OpenLane:** Used to automatically compile ASIC files.
 - **Verilog:** Hardware description language used to implement the design.
 - **Verilog Simulator:** Employed to verify the functionality of the design through simulations.
+- **Quartus Prime 18.1:** Employed to design and simulate the design.
+- - **Terrasic DE10 LITE:** Employed to test core inside an FPGA.
 
-## What's Next?
 
-- [Submit your design for the next shuttle](https://app.tinytapeout.com/).
-- Update [this README](README.md) to provide details about the project's functionality, operation, and testing procedures.
-- Share your project on your preferred social media platform:
-  - LinkedIn [#UART4BITLATCHALU](https://www.linkedin.com/search/results/content/?keywords=%23UART4BITLATCHALU) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#UART4BITLATCHALU](https://chaos.social/tags/UART4BITLATCHALU) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - Twitter [#UART4BITLATCHALU](https://twitter.com/hashtag/UART4BITLATCHALU) [@matthewvenn](https://twitter.com/matthewvenn)
