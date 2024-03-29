@@ -104,7 +104,8 @@ Simulation is conducted similarly to how we performed the latch simulation. Howe
 ### Top Module
 
 The top module its designe to instance evry module so each module serves as stage on the way to transmiting the information.
-#Testing
+
+## Testing
 
 
 ## Resources Employed
@@ -112,18 +113,6 @@ The top module its designe to instance evry module so each module serves as stag
 - **OpenLane:** Used to automatically compile ASIC files.
 - **Verilog:** Hardware description language used to implement the design.
 - **Verilog Simulator:** Employed to verify the functionality of the design through simulations.
-
-## Enable GitHub Actions to Build the Results Page
-
-- [Activate GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## Additional Resources
-
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital Design Tutorials](https://tinytapeout.com/digital_design/)
-- [Understanding Semiconductor Basics](https://tinytapeout.com/siliwiz/)
-- [Community Engagement](https://tinytapeout.com/discord)
-- [Local Design Build Instructions](https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4)
 
 ## What's Next?
 
