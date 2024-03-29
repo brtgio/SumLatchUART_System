@@ -103,12 +103,8 @@ Simulation is conducted similarly to how we performed the latch simulation. Howe
 
 ### Top Module
 
-The top module integrates the 4-bit latch, UART, and ALU to create the complete design. It orchestrates the interaction between these components to achieve the desired functionality.
-
-#### Simulation
-
-Simulate the top module to verify the overall behavior of the design. Test various input scenarios to ensure proper data processing and communication.
-
+The top module its designe to instance evry module so each module serves as stage on the way to transmiting the information.
+#Testing
 
 
 ## Resources Employed
