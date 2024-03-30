@@ -26,7 +26,7 @@ To test the hardware, you will need the following components:
 
 To conduct testing, you'll need to connect a 50MHz clock signal to the clk pin. Begin by selecting operations according to the Operation table provided in the README section of this repository. The operands to be saved in registers range from 0000 to 1111, corresponding to decimal values 0 to 15.
 
-Given the utilization of an 8-bit output signal in the block diagram, no overflow is expected for most operations. However, when using the multiplication Op code, it's important to note that the maximum numbers to be multiplied are 1111 times 1111, resulting in 11100001, which equals 255 in decimal. Be mindful of this limit during testing.
+Given the utilization of an 8-bit output signal in the block diagram, no overflow is expected for most operations. However, when using the multiplication Op code, it's important to note that the maximum numbers to be multiplied are 1111 times 1111, resulting in 11100001, which equals 255 in decimal. 
 ## External hardware
 1. LED for UARTBUSY indicator.
 2. UART resiver to get data out.
