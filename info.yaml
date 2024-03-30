@@ -25,18 +25,18 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "bit 0"
-  ui[1]: "bit 2"
-  ui[2]: "bit 3"
-  ui[3]: "bit 4"
-  ui[4]: "bit 5"
-  ui[5]: "bit 6"
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "data_input [0]"
+  ui[1]: "data_input [1]"
+  ui[2]: "data_input [2]"
+  ui[3]: "data_input [3]"
+  ui[4]: "Op_select [4]"
+  ui[5]: "Op_select [5]"
+  ui[6]: "Op_select [6]"
+  ui[7]: "Op_select [7]"
 
   # Outputs
-  uo[0]: "bit 1"
-  uo[1]: "bit 2"
+  uo[0]: ""
+  uo[1]: ""
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
@@ -45,13 +45,13 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
+  uio[0]: "clk"
+  uio[1]: "reset_n"
+  uio[2]: "save_a_n"
+  uio[3]: "save_b_n"
+  uio[4]: "uart_tx_en"
+  uio[5]: "uart_txd"
+  uio[6]: "uartbusy"
   uio[7]: ""
 
 # Do not change!
