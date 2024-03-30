@@ -28,5 +28,7 @@ To conduct testing, you'll need to connect a 50MHz clock signal to the clk pin. 
 
 Given the utilization of an 8-bit output signal in the block diagram, no overflow is expected for most operations. However, when using the multiplication Op code, it's important to note that the maximum numbers to be multiplied are 1111 times 1111, resulting in 11100001, which equals 255 in decimal. Be mindful of this limit during testing.
 ## External hardware
-
-requiers external 50mhz clock and a uart resiver interface
+1. LED for UARTBUSY indicator.
+2. UART resiver to get data out.
+3. 2 push buttons with pull-up resistor.
+4. 50MHz ocilator or function generator
