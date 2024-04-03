@@ -19,8 +19,8 @@ always @(posedge clk or posedge reset_n) begin
         // Operation selection based on the selection signal
         case (OP_select)
             4'b0001: internal_result <= {4'b0000, a} + {4'b0000, b}; // Addition
-            4'b0010: internal_result <= $signed({4'b0000, a}) - $signed({4'b0000, b}); // Signed Subtraction
-            4'b1110: internal_result <= $signed({4'b0000, a}) / $signed({4'b0000, b}); // Signed Division
+            4'b0010: internal_result <= {4'b0000, a} - {4'b0000, b}; //  Subtraction
+            4'b1110: internal_result <= {4'b0000, a} / {4'b0000, b}); // Division
             4'b0011: internal_result <= {4'b0000, a} & {4'b0000, b}; // AND
             4'b0100: internal_result <= {4'b0000, a} | {4'b0000, b}; // OR
             4'b0101: internal_result <= {4'b0000, a} ^ {4'b0000, b}; // XOR
