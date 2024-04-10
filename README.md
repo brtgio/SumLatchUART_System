@@ -155,13 +155,15 @@ The design was compiled under the Tiny Tapeout submission template for fabricati
 
 The figure is the GDS 2D view generated from the tool used to create the layout.
 
-# Tiny tapeout chip pins layout.
+# Tiny Tapeout Chip Pins Layout
+
 As for fabrication, the template provides us with 24 pins which are named as follows:
 
 | Pin Name   | Number of Pins | Pin Description                                                | Utilized/Unused                     |
-|------------|----------------|----------------------------------------------------------------|
+|------------|----------------|----------------------------------------------------------------|-------------------------------------|
 | Rst        | 1              | Pin to reset the circuit                                       | Unused                              |
-| clk        | 1              | Internal clock signal                                          | Unsused                             |
+| clk        | 1              | Internal clock signal                                          | Unused                              |
 | in         | 8              | Dedicated input pins                                           | Utilized                            |
 | out        | 8              | Dedicated output pins                                          | Unused                              |
 | in_out     | 8              | Configurable I/O (can be set as input or output on top design) | Unused                              |
+
