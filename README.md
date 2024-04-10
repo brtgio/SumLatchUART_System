@@ -168,4 +168,4 @@ As for fabrication, the template provides us with 24 pins which are named as fol
 | in_out [4]  | uart_tx_en  | Input        | Enables UART transmiter               | Enable data out trow UART                 | Active HIGH              |
 | in_out [5]  | uart_tx_en  | Input        | Enables UART transmiter               | Enable data out trow UART                 | Active HIGH              |
 | in_out [6]  | uart_txd    | Output       | UART data transmiter                  | Transmit data                             | Baudrate 9600            |
-| 
+| in [3:0]    | Data_input  | Input        | 4 bit data input                      | Operand dat  
