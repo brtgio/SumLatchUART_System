@@ -151,4 +151,17 @@ The testing was done reading the transmitter value with an arduino ide,
 ## GDS and Tiny Tapeout layout
 The design was compiled under the Tiny Tapeout submission template for fabrication. As you can see at the top of this description, the design has passed all the GDS generation tests, so it's eligible for fabrication.
 
+![GDS 2D view](https://camo.githubusercontent.com/9e9bf006d316128cae8859229dabd908988cc3ae28b97adbe322e2d1875e4fce/68747470733a2f2f62727467696f2e6769746875622e696f2f554152545f342d626974735f414c555f53797374656d2f6764735f72656e6465722e706e67)
 
+The figure is the GDS 2D view generated from the tool used to create the layout.
+
+# Tiny tapeout chip pins layout.
+As for fabrication, the template provides us with 24 pins which are named as follows:
+
+| Pin Name   | Number of Pins | Pin Description                                                | Utilized/Unused                     |
+|------------|----------------|----------------------------------------------------------------|
+| Rst        | 1              | Pin to reset the circuit                                       | Unused                              |
+| clk        | 1              | Internal clock signal                                          | Unsused                             |
+| in         | 8              | Dedicated input pins                                           | Utilized                            |
+| out        | 8              | Dedicated output pins                                          | Unused                              |
+| in_out     | 8              | Configurable I/O (can be set as input or output on top design) | Unused                              |
