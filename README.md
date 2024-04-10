@@ -163,5 +163,5 @@ As for fabrication, the template provides us with 24 pins which are named as fol
 |-------------|-------------|--------------|---------------------------------------|-------------------------------------------|--------------------------|
 | in_out [0]  | clk         | Input        | Clk signal                            | Sync Data and generate baudrate           | 50Mhz clk signal         |
 | in_out [1]  | reset_n     | Input        | Reset signal                          | Signal to go back to initial state        | Active low reset         |
-| in_out [2]  | save_a_n    | Input        | Activates tada transfer |             | Save data to register A                   |                          |
-| ...         | ...         | ...          | ...                                  | ...            |                          |
+| in_out [2]  | save_a_n    | Input        | Activates tada transfer               | Save data to register A                   | Active low               |
+| in_out [3]  | save_b_n    | Input        | Activates tada transfer               | Save data to register B                   | Active low               |
