@@ -159,11 +159,9 @@ The figure is the GDS 2D view generated from the tool used to create the layout.
 
 As for fabrication, the template provides us with 24 pins which are named as follows:
 
-| Pin Name   | Number of Pins | Pin Description                                                | Utilized/Unused                     |
-|------------|----------------|----------------------------------------------------------------|-------------------------------------|
-| Rst        | 1              | Pin to reset the circuit                                       | Unused                              |
-| clk        | 1              | Internal clock signal                                          | Unused                              |
-| in         | 8              | Dedicated input pins                                           | Utilized                            |
-| out        | 8              | Dedicated output pins                                          | Unused                              |
-| in_out     | 8              | Configurable I/O (can be set as input or output on top design) | Utilized                            |
-
+| Pin Name    | Source Name | I/O          | Description                           | Usage                                     | Parameters               |
+|-------------|-------------|--------------|---------------------------------------|-------------------------------------------|--------------------------|
+| in_out [0]  | clk         | Input        | Clk signal                            | Sync Data and generate baudrate           | 50Mhz clk signal         |
+| in_out [1]  | reset_n     | Input        | Reset signal                          | Signal to go back to initial state        | Active low reset         |
+| in_out [2]  | save_a_n    | Input        | Activates tada transfer |             | Save data to register A                   |                          |
+| ...         | ...         | ...          | ...                                  | ...            |                          |
