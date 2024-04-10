@@ -165,5 +165,5 @@ As for fabrication, the template provides us with 24 pins which are named as fol
 | clk        | 1              | Internal clock signal                                          | Unused                              |
 | in         | 8              | Dedicated input pins                                           | Utilized                            |
 | out        | 8              | Dedicated output pins                                          | Unused                              |
-| in_out     | 8              | Configurable I/O (can be set as input or output on top design) | Unused                              |
+| in_out     | 8              | Configurable I/O (can be set as input or output on top design) | Utilized                            |
 
