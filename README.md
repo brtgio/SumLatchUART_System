@@ -146,6 +146,9 @@ The testing was done reading the transmitter value with an arduino ide,
 - **Verilog:** Hardware description language used to implement the design.
 - **Verilog Simulator:** Employed to verify the functionality of the design through simulations.
 - **Quartus Prime 18.1:** Employed to design and simulate the design.
-- - **Terrasic DE10 LITE:** Employed to test core inside an FPGA.
+- **Terrasic DE10 LITE:** Employed to test core inside an FPGA.
+
+## GDS and Tiny Tapeout layout
+The design was compiled under the Tiny Tapeout submission template for fabrication. As you can see at the top of this description, the design has passed all the GDS generation tests, so it's eligible for fabrication.
 
 
