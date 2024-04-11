@@ -159,13 +159,15 @@ The figure is the GDS 2D view generated from the tool used to create the layout.
 
 As for fabrication, the template provides us with 24 pins which are named as follows:
 
-| Pin Name    | Source Name | I/O          | Description                           | Usage                                     | Parameters               |
-|-------------|-------------|--------------|---------------------------------------|-------------------------------------------|--------------------------|
-| in_out [0]  | clk         | Input        | Clk signal                            | Sync Data and generate baudrate           | 50Mhz clk signal         |
-| in_out [1]  | reset_n     | Input        | Reset signal                          | Signal to go back to initial state        | Active low reset         |
-| in_out [2]  | save_a_n    | Input        | Activates tada transfer               | Save data to register A                   | Active low               |
-| in_out [3]  | save_b_n    | Input        | Activates tada transfer               | Save data to register B                   | Active low               |
-| in_out [4]  | uart_tx_en  | Input        | Enables UART transmiter               | Enable data out trow UART                 | Active HIGH              |
-| in_out [5]  | uart_tx_en  | Input        | Enables UART transmiter               | Enable data out trow UART                 | Active HIGH              |
-| in_out [6]  | uart_txd    | Output       | UART data transmiter                  | Transmit data                             | Baudrate 9600            |
-| in [3:0]    | Data_input  | Input        | 4 bit data input                      | Operand dat  
+| Pin Name   | Source Name | I/O    | Description                          | Purpose                              | Parameters               |
+|------------|-------------|--------|--------------------------------------|--------------------------------------|--------------------------|
+| in_out[0]  | clk         | Input  | Clock Signal                         | Synchronizes data and generates baud rate | 50MHz clock signal  |
+| in_out[1]  | reset_n     | Input  | Reset Signal                         | Returns system to initial state           | Active low reset    |
+| in_out[2]  | save_a_n    | Input  | Activate Transfer to Register A      | Initiates data transfer to Register A     | Active low          |
+| in_out[3]  | save_b_n    | Input  | Activate Transfer to Register B      | Initiates data transfer to Register B     | Active low          |
+| in_out[4]  | uart_tx_en  | Input  | Enable UART Transmitter              | Enables data transmission via UART        | Active HIGH         |
+| in_out[5]  | uart_tx_en  | Input  | Enable UART Transmitter              | Enables data transmission via UART        | Active HIGH         |
+| in_out[6]  | uart_txd    | Output | UART Data Transmitter                | Transmits data via UART                   | Baud rate: 9600     |
+| in[3:0]    | Data_input  | Input  | 4-Bit Data Input                     | Input for operand data                    | Active HIGH         |
+| in[7:4]    | OP_select   | Input  | 4-Bit Operation Selector             | Selects operation to compute              | Active HIGH         |
+
