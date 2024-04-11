@@ -171,3 +171,4 @@ As for fabrication, the template provides us with 24 pins which are named as fol
 | in[3:0]    | Data_input  | Input  | 4-Bit Data Input                     | Input for operand data                    | Active HIGH         |
 | in[7:4]    | OP_select   | Input  | 4-Bit Operation Selector             | Selects operation to compute              | Active HIGH         |
 
+Note that uname pins are unuzed and testing was done under a 3.3V LVTTL FPGA.
