@@ -159,7 +159,7 @@ The figure is the GDS 2D view generated from the tool used to create the layout.
 
 As for fabrication, the template provides us with 24 pins which are named as follows:
 <p align="center">
-    <img src="chip%20pinout.png" alt="chip pinout">
+    <img src="chip_pinout.jpg" alt="chip pinout">
 </p>
 The next table list the pins used acording with the package pins.
 
